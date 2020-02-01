@@ -1,0 +1,206 @@
+/* panel */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body.darkmode .container{
+    background: #1F1F1F;
+}
+body.darkmode .container-configs{
+    transition: .3s ease all;
+}
+body.darkmode .container-configs .navigation{
+    transition: .3s ease all;
+   
+}
+body.darkmode .container-configs  .config-section{
+    transition: .3s ease all;
+
+}
+body.darkmode .cards-container{
+    box-shadow: none;
+    background: #282828;
+}
+body.darkmode .list-title{
+    color:rgb(183, 184, 190);
+}
+body.darkmode .info .sub-title{
+    color:rgb(183, 184, 190); 
+}
+body.darkmode .navigation{
+    background: #282828;
+}
+body.darkmode .card-job{
+    background: #3E3E3E;
+    border-color: rgb(112, 112, 112);
+}
+body.darkmode .title-card{
+    color: rgb(183, 184, 190);
+}
+body.darkmode .bottom{
+    background: #282828;
+}
+body.darkmode #finder {
+    background: #282828;
+}
+body.darkmode .search-container .button{
+    background: #282828;
+}
+
+body.darkmode .popup-add{
+    background: #282828;
+    box-shadow: none;
+}
+body.darkmode .overlay-add{
+    background:rgba(168, 168, 168, 0.164);
+}
+body.darkmode .popup-add input , body.darkmode .popup-add textarea {
+    background: #3E3E3E;
+    color: rgb(183, 184, 190) !important;
+    /* border: none !important; */
+}
+body.darkmode .popup-add  h2, .legend {
+    color: rgb(183, 184, 190);
+}
+
+body.darkmode .popup-options {
+    background: #282828;
+    box-shadow: none;
+}
+
+body.darkmode .popup-options .link-container {
+    border-color: rgb(112, 112, 112) !important;
+}
+body.darkmode .popup-options a {
+    color: rgb(183, 184, 190);
+
+}
+body.darkmode .overlay-options{
+    background:rgba(168, 168, 168, 0.164);
+}
+body.darkmode .popup-delete {
+    background: #282828;
+    box-shadow: none;
+    color: rgb(183, 184, 190);   
+}
+body.darkmode .popup-delete .title{
+    color: rgb(183, 184, 190);
+}
+body.darkmode .overlay-delete{
+    background:rgba(168, 168, 168, 0.164);
+}
+body.darkmode .popup-proceso {
+    background: #282828;
+    box-shadow: none;
+    color: rgb(183, 184, 190);    
+}
+body.darkmode .popup-proceso input {
+    background: #3E3E3E;
+    color: rgb(183, 184, 190);
+    border: 1px solid rgb(183, 184, 190);
+}
+
+body.darkmode .popup-alert {
+    background: #282828;
+    box-shadow: none;
+    color: rgb(183, 184, 190);   
+}
+body.darkmode .popup-alert .title {
+    color: rgb(183, 184, 190);
+}
+body.darkmode .overlay-proceso{
+    background:rgba(168, 168, 168, 0.164);
+}
+
+body.darkmode .popup-print {
+    background: #282828;
+    box-shadow: none;
+}
+body.darkmode .popup-print .title {
+    color: rgb(183, 184, 190);
+}
+body.darkmode .overlay-print{
+    background:rgba(168, 168, 168, 0.164);
+}
+
+body.darkmode .popup-menu {
+    background: #282828;
+    box-shadow: none;
+}
+body.darkmode .popup-menu .link {
+    color: rgb(183, 184, 190);
+}
+body.darkmode .overlay-menu {
+    background: rgba(168, 168, 168, 0.164);
+}
+
+/* config */
+
+body.darkmode .config-section{
+    background: #282828;
+    color: rgb(183, 184, 190);
+    border-color: rgb(112, 112, 112);
+}
+body.darkmode .section-title{
+    color: rgb(183, 184, 190);
+}
+body.darkmode div.option {
+    background: #282828;
+    border-color: rgb(112, 112, 112);
+}
+body.darkmode .description-option {
+    color: rgb(183, 184, 190);
+}
+
+body.darkmode .table-container .table-header{
+    background: #1F1F1F;
+    color: rgb(183, 184, 190);
+}
+
+body.darkmode .table-body .table-row{
+    background: #3E3E3E;
+    border-color: rgb(112, 112, 112);
+}
+body.darkmode .table-row  .col{
+    color: rgb(183, 184, 190);
+}
+body.darkmode .table-row :nth-child(1) {
+    color: var(--blue);
+    font-weight: 700;
+}
+body.darkmode .tabs-container > button {
+   color: rgb(183, 184, 190);
+    background: #282828;
+    border: 1px solid rgb(112, 112, 112);
+
+}
+body.darkmode button.select-tab {
+    background: rgb(56, 147, 243);
+    color: #fff;
+    border: 1px solid rgb(56, 147, 243);
+}
+body.darkmode input.input-r {
+    background: #3E3E3E;
+    border: 1px solid rgb(112, 112, 112);
+    color: rgb(183, 184, 190);
+}
+
+body.darkmode .popup-show {
+    background: #282828;
+    box-shadow: none;
+    color: rgb(183, 184, 190);
+}
+body.darkmode .overlay-show{
+    background:rgba(168, 168, 168, 0.164);
+}
+
+body.darkmode .popup-show .title-container > .title{
+    color: rgb(183, 184, 190) !important;
+}
+body.darkmode .popup-show .row {
+    border-bottom-color: rgb(112, 112, 112);
+}
+body.darkmode .info-container-right p {
+    color: rgb(183, 184, 190);
+}

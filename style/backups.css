@@ -1,0 +1,88 @@
+:root {
+    --background-color-pop: rgba(0, 0, 0, 0.5);
+    --black: #2B2E3A;
+    --grey: #8A8A8A;
+    --second-color: #5CCAFF;
+    
+    --blue: rgb(10,132,255) ;
+    --background-color: rgb(242, 242, 247);
+    --background-color-pop: rgba(0, 0, 0, .3);
+    --fz-big: 1.1em;
+    --color-text-title: #504f4f;
+}
+.backups-container {
+    display: flex;
+    flex-direction: column;
+}
+.drop-zone {
+    width: 40vw;
+    height: 53vh;
+    margin: 0 auto 2rem auto;
+    border: 3px dashed var(--blue);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--grey);
+    cursor: pointer;
+}
+.active{
+  border: 3px solid var(--blue);
+  /* opacity: .5; */
+  /* transform: scale(1.1); */
+}
+#file {
+  display: none;
+}
+.drop-zone .img-size {
+    width: 5rem;
+    margin-bottom: 1rem;
+}
+.btn-upload {
+    margin: 0 auto;
+    background: var(--blue);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: var(--fz-big);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.rebote{
+    position: relative;
+    animation-name: rebote;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+  }
+  /* Standard syntax */
+  @keyframes rebote {
+    0%   {left:0px; top:0px;}
+    12%   {left:0px; top:5px;}
+    25%  {left:0px; top:10px;}
+    37%   {left:0px; top:15px;}
+    50%  {left:0px; top:20px;}
+    75%  {left:0px; top:10px;}
+    85%   {left:0px; top:5px;}
+    100% {left:0px; top:0px;}
+  }
+
+  input.input-r {
+    padding: .87em;
+    font-size: .95em;
+    width: 80%;
+    text-align: center;
+  }
+
+  .buttons-container a{
+    width: 50%;
+    padding: 2.5vh;
+    background: none;
+    border: none;
+    color: rgb(10, 132, 255);
+    font-weight: 700;
+    display: inline-block !important;
+    font-size: .8em;
+    text-decoration: none;
+  }

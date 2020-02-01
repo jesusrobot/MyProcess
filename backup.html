@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyProcess</title>
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/componentes.css">
+    <link rel="stylesheet" href="style/backups.css">
+    <link rel="stylesheet" href="style/darkmode.css">
+</head>
+<body id="body">
+    <!-- nav -->
+    <nav class="navigation">
+        <div class="navigation-division left">
+            <button class="button mr" id="back"><img class="icon" src="assets/icons/previous.svg" alt=""></button>
+        </div>
+        <div class="navigation-division center">
+            <h1 class="app-title">MyProcess</h1>
+        </div>
+        <div class="navigation-division rigth">
+            <button class="button ml" id="menu"><img class="icon" src="assets/icons/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <!-- lineproduction -->
+    <main class="container">
+        <!-- toolbar -->
+        <div class="tool-bar">
+            <div class="left div-50">
+                <button class="button bkg-blue"><img src="assets/icons/database.svg" alt="" class="icon"></button>
+                <div class="info">
+                    <h2 class="sub-title">Respaldos</h2>
+                    <!-- <p><span id="counter-g"></span> items</p> -->
+                </div>
+            </div>
+            <div class="rigth div-50">
+                <!-- <div class="search-container"> -->
+                    <!-- <input type="text" name="" id="finder" placeholder="Search">                -->
+                    <!-- <button class="button mr-small"><img class="icon" src="assets/icons/loupe.svg" alt=""></button>  -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- backups -->
+        <div class="backups-container">
+            <input type="file" name="file" id="file">
+            <div class="drop-zone" id="drop-zone">
+                <img src="assets/icons/file.svg" alt="" class="img-size rebote">
+                <p class="text-description">Suelta aqui un archivo de respaldo</p>
+            </div>
+            <button class="btn-upload" id="backup">Generar respaldo</button>
+        </div>
+    </main>
+     <!-- menu -->
+     <nav class="overlay-menu" id="overlay">
+            <div class="popup-menu" id="popup">
+                <div class="link-container">
+                    <a href="panel.html" class="link">Lineproduction</a> 
+                 </div>
+                 <div class="link-container">
+                     <a href="lists.html" class="link">Listas</a>
+                 </div>
+                 <div class="link-container">
+                     <a href="backup.html" class="link here">Respaldos</a>
+                 </div>
+                 <div class="link-container">
+                    <a href="configurations.html" class="link">Configuracion</a>
+                </div>
+                 <div class="link-container">
+                     <a href="about.html" class="link">Sobre MyProcess</a>
+                 </div>
+                <div class=" no-border-bottom">
+                    <button class="close" id="cerrar">Cerrar</button>
+                </div>
+            </div>
+    </nav>
+      <!-- error modal window -->
+      <div class="overlay-alert" id="errOverlay">
+        <div class="popup-alert" id="errPop">
+            <section class="title-container">
+                <p class="title">Alert</p>
+            </section>
+            <section class="description-container">
+                <p class="description" id="mensaje"></p>
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupAlert">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- backup product window -->
+    <div class="overlay-delete" id="overlay-backup">
+        <div class="popup-delete" id="popBackup">
+            <section class="title-container">
+                <p class="title">Respaldar</p>
+            </section>
+            <section class="description-container">
+                <p class="description">Estas a punto de respaldar la base de datos. Estas seguro?</p>
+            </section>
+            <section class="printer">
+                    <input type="text" id="filename" placeholder="Nombre del archivo (No necesario)" class="input-r">
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupBackup">Cancelar</button>
+                <a id="actionBackup">Aceptar</a>
+            </section>
+        </div>
+    </div>
+    <!-- confirm -->
+    <div class="overlay-delete" id="overlay-confirm">
+        <div class="popup-delete" id="popConfirm">
+            <section class="title-container">
+                <p class="title">Cargar respaldo</p>
+            </section>
+            <section class="description-container">
+                <p class="description">Estas a punto de cargar un respaldo. Estas seguro?</p>
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupConfirm">Cancelar</button>
+                <a id="actionRespaldad">Aceptar</a>
+            </section>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="js/backups.js"></script>
+</body>
+</html>

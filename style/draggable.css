@@ -1,0 +1,24 @@
+#columns {
+    /* margin-top: 40px; */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+  }
+  .column {
+    flex: 0 0 auto;
+    /* width: 340px; */
+    /* height: 520px; */
+    box-sizing: border-box;
+  }
+
+  .hold:active:hover {
+    border: solid 3px blue;
+  }
+  .hovered {
+    border-style: dashed;
+  }
+  .invisible {
+    display: none;
+  }

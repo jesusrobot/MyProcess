@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyProcess</title>
+    <link rel="stylesheet" href="assets/dragula/dragula.css">
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/componentes.css">
+    <link rel="stylesheet" href="style/darkmode.css">
+</head>
+<body id="body">
+    <!-- nav -->
+    <nav class="navigation">
+        <div class="navigation-division left">
+            <button class="button mr" id="back"><img class="icon" src="assets/icons/previous.svg" alt=""></button>
+        </div>
+        <div class="navigation-division center">
+            <h1 class="app-title">MyProcess</h1>
+        </div>
+        <div class="navigation-division rigth">
+            <button class="button ml" id="menu"><img class="icon" src="assets/icons/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <!-- lists -->
+    <main class="container">
+        <!-- toolbar -->
+        <div class="tool-bar">
+            <div class="left div-50">
+                <button class="button bkg-blue"><img src="assets/icons/spreadsheet.svg" alt="" class="icon"></button>
+                <div class="info">
+                    <h2 class="sub-title">Lists</h2>
+                    <p><span id="counter-g"></span> items</p>
+                </div>
+                <div id="tools" class="tools">
+                    <button class="btnRestore" id="restore">Restaurar</button>
+                </div>
+            </div>
+            <div class="rigth div-50">
+                <div class="search-container">
+                        <input type="text" name="" id="finder" placeholder="Search">               
+                    <button class="button mr-small"><img class="icon" src="assets/icons/loupe.svg" alt=""></button> 
+                </div>
+            </div>
+        </div>
+        <div class="tabs-container" id="tabs">
+            <button class="select-tab" id="all">Todo</button>
+            <button id="to-do">Por empezar</button>
+            <button id="doing">En proceso</button>
+            <button id="done">Finalizado</button>
+            <button id="processed">Procesados</button>
+            <button id="recycleBin">Borrado</button>
+        </div>
+        <div class="table-container">
+            <div class="table-header">
+                <div class="col-name">Id</div>
+                <div class="col-name">Cliente</div>
+                <div class="col-name">Telefono</div>
+                <div class="col-name">Producto</div>
+                <div class="col-name">Problema</div>
+                <div class="col-name">Fecha entrega</div>
+                <div class="col-name">Status</div>
+                <div class="col-name">Precio</div>
+            </div>
+            <div class="table-body" id="table-body">
+                <!-- insert -->
+                
+            </div>
+        </div>
+    </main>
+     <!-- menu -->
+     <nav class="overlay-menu" id="overlay">
+            <div class="popup-menu" id="popup">
+                <div class="link-container">
+                    <a href="panel.html" class="link">Lineproduction</a> 
+                 </div>
+                 <div class="link-container">
+                     <a href="lists.html" class="link here">Listas</a>
+                 </div>
+                 <div class="link-container">
+                     <a href="backup.html" class="link">Respaldos</a>
+                 </div>
+                 <div class="link-container">
+                    <a href="configurations.html" class="link">Configuracion</a>
+                </div>
+                 <div class="link-container">
+                     <a href="about.html" class="link">Sobre MyProcess</a>
+                 </div>
+                <div class=" no-border-bottom">
+                    <button class="close" id="cerrar">Cerrar</button>
+                </div>
+            </div>
+    </nav>
+    <!-- options card -->
+    <!-- Add Product modal window-->
+
+    <!-- error modal window -->
+    <div class="overlay-alert" id="errOverlay">
+        <div class="popup-alert" id="errPop">
+            <section class="title-container">
+                <p class="title">Alert</p>
+            </section>
+            <section class="description-container">
+                <p class="description" id="mensaje"></p>
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupAlert">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- show info window -->
+    <!-- edit product window -->
+
+    <!-- restore product window -->
+    <div class="overlay-delete" id="overlay-restore">
+        <div class="popup-delete" id="popRestore">
+            <section class="title-container">
+                <p class="title">Restaurar</p>
+            </section>
+            <section class="description-container">
+                <p class="description">Estas a punto de restaurar este elemento. Se visualizara de nuevo en el area "Por empezar". Estas seguro?</p>
+            </section>
+            <!-- <section class="printer"> -->
+                <!-- <div class="label"> -->
+                    <!-- <p class="lebel-item">Generar Ticket</p> -->
+                <!-- </div> -->
+                <!-- <div class="check"> -->
+                        <!-- <input type='checkbox' class='ios8-switch' id='checkbox-1'> -->
+                        <!-- <label for='checkbox-1'></label> -->
+           <!--      </div> -->
+            <!-- </section> -->
+            <section class="buttons-container">
+                <button id="closePopupRestore">Cancelar</button>
+                <button id="actionRestore">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- process  window-->
+
+    <!-- print window  -->
+
+    <!-- scripts -->
+    <script src="js/lists.js"></script>
+</body>
+</html>

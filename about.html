@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyProcess</title>
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/componentes.css">
+    <!-- <link rel="stylesheet" href="style/backups.css"> -->
+    <link rel="stylesheet" href="style/darkmode.css">
+</head>
+<body id="body">
+    <!-- nav -->
+    <nav class="navigation">
+        <div class="navigation-division left">
+            <button class="button mr" id="back"><img class="icon" src="assets/icons/previous.svg" alt=""></button>
+        </div>
+        <div class="navigation-division center">
+            <h1 class="app-title">MyProcess</h1>
+        </div>
+        <div class="navigation-division rigth">
+            <button class="button ml" id="menu"><img class="icon" src="assets/icons/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <!-- lineproduction -->
+    <main class="container">
+        <!-- toolbar -->
+        <div class="tool-bar">
+            <div class="left div-50">
+                <button class="button bkg-blue"><img src="assets/icons/database.svg" alt="" class="icon"></button>
+                <div class="info">
+                    <h2 class="sub-title">Sobre MyProcess</h2>
+                    <!-- <p><span id="counter-g"></span> items</p> -->
+                </div>
+            </div>
+            <div class="rigth div-50">
+                <!-- <div class="search-container"> -->
+                    <!-- <input type="text" name="" id="finder" placeholder="Search">                -->
+                    <!-- <button class="button mr-small"><img class="icon" src="assets/icons/loupe.svg" alt=""></button>  -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="wrap">
+                <section class="logo-container-left">
+                        <div class="logo-container">
+                            <p class="app-name">MyProcess</p>
+                            <sub>By <span>impulse</span></sub>
+                        </div>
+                    </section>
+                    <section class="info-container-right">
+                    <p class="assing name"><span>MyProcess</span> Dalia</p>
+                    <p class="assing version">version 1.0</p>
+                    <p class="assing desarrollador"><span>Desarrollador:</span>Impulse softworks</p>
+                    <p class="assing desarrollador"><span>Desarrollador:</span>Jesus M. Velasco</p>
+                    <p class="assing fecha"><span>fecha de publicacion:</span>28 de Enero del 2020</p>
+                    <p class="assing administrador"><span>Nombre del Negocio:</span><span id="nameStore"></span></p>
+                    <p class="assing dueno"><span>Propietario de esta copia:</span><span id="adminStore"></span></p>
+                    <section class="info">
+                        <a href="#" id="support">Soporte técnico</a>
+                        </section>
+                    </section>
+                </div>
+        </div>
+    </main>
+     <!-- menu -->
+     <nav class="overlay-menu" id="overlay">
+            <div class="popup-menu" id="popup">
+                <div class="link-container">
+                    <a href="panel.html" class="link">Lineproduction</a> 
+                 </div>
+                 <div class="link-container">
+                     <a href="lists.html" class="link">Listas</a>
+                 </div>
+                 <div class="link-container">
+                     <a href="backup.html =" class="link">Respaldos</a>
+                 </div>
+                 <div class="link-container">
+                    <a href="configurations.html" class="link">Configuracion</a>
+                </div>
+                 <div class="link-container">
+                     <a href="about.html" class="link here">Sobre MyProcess</a>
+                 </div>
+                <div class=" no-border-bottom">
+                    <button class="close" id="cerrar">Cerrar</button>
+                </div>
+            </div>
+    </nav>
+    <div class="overlay-delete" id="overlay-confirm">
+        <div class="popup-delete" id="popConfirm">
+            <section class="title-container">
+                <p class="title">Soporte técnico</p>
+            </section>
+            <section class="description-container" style="flex-direction: column;">
+                <p class="description">Para recibir soporte técnico sobre esta aplicación o cualquier otra de impulse por favor póngase en contacto con el desarrollador <b>Jesús Velasco</b>:</p>
+                <p class="descripcion" style="font-size: 2rem; font-weight: lighter; color: dodgerblue; user-select: auto;">626 108 9114</p>
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupConfirm" style="width: 100%; border-right: none;">Cancelar</button>
+                <!-- <a id="actionRespaldad">Aceptar</a> -->
+            </section>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="js/about.js"></script>
+</body>
+</html>

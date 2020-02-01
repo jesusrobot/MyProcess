@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyProcess</title>
+    <link rel="stylesheet" href="assets/dragula/dragula.css">
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/componentes.css">
+    <link rel="stylesheet" href="style/darkmode.css">
+</head>
+<body id="body">
+    <!-- nav -->
+    <nav class="navigation">
+        <div class="navigation-division left">
+            <button class="button mr" id="back"><img class="icon" src="assets/icons/previous.svg" alt=""></button>
+        </div>
+        <div class="navigation-division center">
+            <h1 class="app-title">MyProcess</h1>
+        </div>
+        <div class="navigation-division rigth">
+            <button class="button ml" id="menu"><img class="icon" src="assets/icons/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <!-- lineproduction -->
+    <main class="container">
+        <!-- toolbar -->
+        <div class="tool-bar">
+            <div class="left div-50">
+                <button class="button bkg-blue"><img src="assets/icons/assembly.svg" alt="" class="icon"></button>
+                <div class="info">
+                    <h2 class="sub-title">Line production</h2>
+                    <p><span id="counter-g"></span> items</p>
+                </div>
+            </div>
+            <div class="rigth div-50">
+                <div class="search-container">
+                        <input type="text" name="" id="finder" placeholder="Search">               
+                    <button class="button mr-small"><img class="icon" src="assets/icons/loupe.svg" alt=""></button> 
+                </div>
+            </div>
+        </div>
+        <div class="tasks-app" id="main-zone">
+            <!-- por empezar -->
+            <div class="cards-container">
+                <div class="top">
+                    <div class="container-description">
+                            <h3 class="list-title">Por empezar</h3>
+                            <p class="list-subtitle"><span id="to-do-number"></span> items</p>
+                    </div>
+                    <!-- <button class="button"><img src="assets/icons/context-menu.svg" alt="" class="icon"></button> -->
+                </div>
+                <div class="center" id="to-do" class="todo">
+                    <!-- <div class="card-job">
+                        <div class="indicator"></div>
+                        <div class="description-card">
+                                <div class="title-card">
+                                    <p class="name-product-card">Producto</p>
+                                    <button class="button"><img src="assets/icons/context-menu.svg" alt="" class="icon"></button>
+
+                                </div>
+                                <div class="client">Jeus Velasco</div>                      
+                        </div>
+                        <div class="more-info-card">
+                            <div class="tasks">
+                                <img class="icon" src="assets/icons/office-clip.svg" alt="">
+                                <p class="number-of-task">1</p>
+                            </div> 
+                            <div class="prioridad">
+                                <div class="p-item baja">B</div>
+                                <div class="p-item media">M</div>
+                                <div class="p-item alta">A</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="bottom">
+                    <button class="button" id='addElement'>Agregar trabajo</button>
+                </div>
+            </div>
+            <!-- en proceso -->
+            <div class="cards-container">
+                <div class="top">
+                    <div class="container-description">
+                            <h3 class="list-title">En proceso</h3>
+                            <p class="list-subtitle"><span id="doing-number"></span> items</p>
+                    </div>
+                    <!-- <button class="button"><img src="assets/icons/context-menu.svg" alt="" class="icon"></button> -->
+                </div>
+                <div class="center" id="doing">
+                    
+                </div>
+                <!-- <div class="bottom">
+                    <button class="button">Add a job</button>
+                </div> -->
+            </div>
+            <!-- filalizado -->
+            <div class="cards-container">
+                <div class="top">
+                    <div class="container-description">
+                            <h3 class="list-title">Finalizado</h3>
+                            <p class="list-subtitle"><span id="done-number"></span> items</p>
+                    </div>
+                    <!-- <button class="button"><img src="assets/icons/context-menu.svg" alt="" class="icon"></button> -->
+                </div>
+                <div class="center" id="done">
+                   
+                </div>
+                <!-- <div class="bottom">
+                    <button class="button">Add a job</button>
+                </div> -->
+            </div>
+        </div>
+    </main>
+     <!-- menu -->
+     <nav class="overlay-menu" id="overlay">
+            <div class="popup-menu" id="popup">
+                <div class="link-container">
+                    <a href="panel.html" class="link here">Lineproduction</a> 
+                 </div>
+                 <div class="link-container">
+                     <a href="lists.html" class="link">Listas</a>
+                 </div>
+                 <div class="link-container">
+                     <a href="backup.html" class="link">Respaldos</a>
+                 </div>
+                 <div class="link-container">
+                    <a href="configurations.html" class="link">Configuracion</a>
+                </div>
+                 <div class="link-container">
+                     <a href="about.html" class="link">Sobre MyProcess</a>
+                 </div>
+                <div class=" no-border-bottom">
+                    <button class="close" id="cerrar">Cerrar</button>
+                </div>
+            </div>
+    </nav>
+    <!-- options card -->
+    <div class="overlay-options" id="overlay-options">
+       <div class="popup-options" id="optionsPop">
+            <!-- <section class="title-container">
+                <p class="title">Opciones</p>
+            </section> -->
+            <section class="opinoes" id="options">
+                <div class="link-container">
+                    <a href="#" id="show" class="link">Ver</a> 
+                 </div>
+                 <div class="link-container">
+                    <a href="#" id="edit" class="link">Editar</a> 
+                 </div>
+                 <div class="link-container">
+                    <a href="#" id="delete" class="link red">Eliminar</a> 
+                 </div>
+                 <div class="link-container hidden " id="p-container">
+                    <a href="#" id="proccess" class="ss link">$ Procesar</a> 
+                 </div>
+                </section>
+            <section class="buttons-container">
+                <button id="closePopupOptions">Cerrar</button>
+            </section>
+       </div>
+    </div>
+    <!-- Add Product modal window-->
+    <div class="overlay-add" id="overlay-add">
+        <div class="popup-add" id="popup-add">
+            <h2>Registrar producto</h2>
+            <div class="container-data">
+                <div class="equipo-data">
+                        <div class="container-top">
+                            <div class="item">
+                                <p class="legend">Datos equipo</p>
+                                <input type="text" class="text" placeholder="Nombre del equipo" id="nombre_equipo"> 
+                            </div>
+                            <div class="item-charger">
+                                <p class="legend">Cargador</p>
+                                <div class="check">
+                                    <input type='checkbox' class='ios8-switch' id='checkbox-1'>
+                                    <label for='checkbox-1'></label>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <textarea class="text-area" cols="30" rows="10" placeholder="Describa el problema del equipo" id="problemas_equipo"></textarea>
+                        <div class="more-info-product">
+                                <p class="legend">Especificaciones</p>
+
+                            <input type="text" class="sub-text" id="marca" placeholder="Marca">
+                            <input type="text" class="sub-text" id="modelo" placeholder="Modelo">
+                            <input type="text" class="sub-text" id="noSerie" placeholder="Serie/IMEI">
+                            <input type="text" class="sub-text" id="color" placeholder="Color">
+                        </div>
+                        <div class="status-area">
+                        
+                        </div>
+                </div>
+                <div class="cliente-data">
+                    <p class="legend">Datos cliente</p>
+                    <input type="text" class="text" id="nombre_Cliente" placeholder="Nombre cliente">
+                    <input type="text" class="text" id="dir" placeholder="Direccion">
+                    <input type="text" class="text" id="telefono" placeholder="Numero de tel.">
+                    <p class="legend">Fecha limite</p>
+                    <input type="date" class="text" id="fecha">
+                    <p class="legend">Prioridad</p>
+                    
+                    <div class="radio-group">
+                        <label class="radio baja" >
+                            <input type="radio" id="baja" class="option-input" name="example" />
+                                Baja
+                            </label>
+                            <label class="radio media"  >
+                              <input type="radio" id="media" class="option-input" name="example" />
+                                Media
+                            </label>
+                            <label class="radio alta" >
+                              <input type="radio" id="alta" class="option-input" name="example" />
+                                Alta
+                        </label>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="buttons-panel">
+                <button class="cancel btn" id="closeAdd">Cancelar</button>
+                <button class="save btn" id="saveAdd">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <!-- error modal window -->
+    <div class="overlay-alert" id="errOverlay">
+        <div class="popup-alert" id="errPop">
+            <section class="title-container">
+                <p class="title">Alert</p>
+            </section>
+            <section class="description-container">
+                <p class="description" id="mensaje"></p>
+            </section>
+            <section class="buttons-container">
+                <button id="closePopupAlert">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- show info window -->
+    <div class="overlay-show" id="showOverlay">
+        <div class="popup-show" id="popup-show">
+            <section class="title-container">
+                <p class="title">Informacion del producto</p>
+            </section>
+            <section class="data-container">
+                <div class="row">
+                    <div class="col">Nombre del equipo:</div>
+                    <div class="col" id="nombreEquipo"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Problema del equipo:</div>
+                    <div class="col" id="problema"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Marca:</div>
+                    <div class="col" id="marca2"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Modelo:</div>
+                    <div class="col" id="modelo2"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Serie/MEI:</div>
+                    <div class="col" id="serie"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Color:</div>
+                    <div class="col" id="color2"></div>
+                </div>
+                <!-- cliente -->
+                <div class="row">
+                    <div class="col">Nombre del Cliente:</div>
+                    <div class="col" id="nCliente"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Direccion:</div>
+                    <div class="col" id="direccion1"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Numero de tel.:</div>
+                    <div class="col" id="tel"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Fecha limite:</div>
+                    <div class="col" id="fecha2"></div>
+                </div>
+                <div class="row">
+                    <div class="col">Prioridad:</div>
+                    <div class="col" id="prioridad2"></div>
+                </div>
+            </section>
+            <section class="buttons-container">
+                <!-- <button id="closePopupShow">Cancelar</button> -->
+                <button id="actionShow">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- pendiente -->
+    <!-- edit product window -->
+    <div class="overlay-add" id="overlay-edit">
+        <div class="popup-add" id="popup-edit">
+            <h2>Editar producto</h2>
+            <div class="container-data">
+                <div class="equipo-data">
+                        <!-- <p class="legend">Datos equipo</p> -->
+                        <div class="container-top">
+                                <div class="item">
+                                    <p class="legend">Datos equipo</p>
+                                    <input type="text" class="text" placeholder="Nombre del equipo" id="nombre_equipo1"> 
+                                </div>
+                                <div class="item-charger">
+                                    <p class="legend">Cargador</p>
+                                    <div class="check">
+                                        <input type='checkbox' class='ios8-switch' id='checkbox-11'>
+                                        <label for='checkbox-11'></label>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- <input type="text" class="text" placeholder="Nombre del equipo" id="nombre_equipo1"> -->
+                        <textarea class="text-area" cols="30" rows="10" placeholder="Describa el problema del equipo" id="problemas_equipo1"></textarea>
+                        <div class="more-info-product">
+                                <p class="legend">Especificaciones</p>
+
+                            <input type="text" class="sub-text" id="marca1" placeholder="Marca">
+                            <input type="text" class="sub-text" id="modelo1" placeholder="Modelo">
+                            <input type="text" class="sub-text" id="noSerie1" placeholder="Serie/IMEI">
+                            <input type="text" class="sub-text" id="color1" placeholder="Color">
+                        </div>
+                        <div class="status-area">
+                        
+                        </div>
+                </div>
+                <div class="cliente-data">
+                    <p class="legend">Datos cliente</p>
+                    <input type="text" class="text" id="nombre_Cliente1" placeholder="Nombre cliente">
+                    <input type="text" class="text" id="dir1" placeholder="Direccion">
+                    <input type="text" class="text" id="telefono1" placeholder="Numero de tel.">
+                    <p class="legend">Fecha limite</p>
+                    <input type="date" class="text" id="fecha1">
+                    <p class="legend">Prioridad</p>
+                    
+                    <div class="radio-group">
+                        <label class="radio baja" >
+                            <input type="radio" id="baja1" class="option-input" name="example" />
+                                Baja
+                            </label>
+                            <label class="radio media"  >
+                              <input type="radio" id="media1" class="option-input" name="example" />
+                                Media
+                            </label>
+                            <label class="radio alta" >
+                              <input type="radio" id="alta1" class="option-input" name="example" />
+                                Alta
+                        </label>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="buttons-panel">
+                <button class="cancel btn" id="closeEdit">Cancelar</button>
+                <button class="save btn" id="saveEdit">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <!-- delete product window -->
+    <div class="overlay-delete" id="overlay-delete">
+        <div class="popup-delete" id="deletePop">
+            <section class="title-container">
+                <p class="title">Borrar</p>
+            </section>
+            <section class="description-container">
+                <p class="description">Estas a punto de borrar este producto. ¿Estas seguro?</p>
+            </section>
+            <!-- <section class="printer"> -->
+                <!-- <div class="label"> -->
+                    <!-- <p class="lebel-item">Generar Ticket</p> -->
+                <!-- </div> -->
+                <!-- <div class="check"> -->
+                        <!-- <input type='checkbox' class='ios8-switch' id='checkbox-1'> -->
+                        <!-- <label for='checkbox-1'></label> -->
+           <!--      </div> -->
+            <!-- </section> -->
+            <section class="buttons-container">
+                <button id="closePopupDelete">Cancelar</button>
+                <button id="actionDelete">Aceptar</button>
+            </section>
+        </div>
+    </div>
+    <!-- process  window-->
+    <div class="overlay-proceso" id="processOverlay">
+            <div class="popup-proceso" id="procesoPop">
+                <section class="title-container">
+                    <p class="title">$ Procesar</p>
+                </section>
+                <section class="description-container">
+                    <p class="dregisterescription">Estas procesando este producto. ¿Estas seguro?</p>
+                </section>
+                <section class="money-in">
+                    <fieldset class="single-input">
+                        <!-- <label class="title-input">Precio</label> -->
+                        <input type="text" id="costo" placeholder="Costo" class="input input-money mb-inputs">
+                        <!-- <div class="divisa-cobranza" id="divisaMoneyIn">MXN</div> -->
+                    </fieldset>
+                    <fieldset class="single-input">
+                        <!-- <label class="title-input">Precio</label> -->
+                        <input type="text" id="pago" placeholder="Pago" class="input input-money mb-inputs">
+                        <!-- <div class="divisa-cobranza" id="divisaMoneyIn">MXN</div> -->
+                    </fieldset>
+                </section>
+                <section class="printer">
+                    <div class="label">
+                        <p class="lebel-item">Generar Ticket</p>
+                    </div>
+                    <div class="check">
+                            <input type='checkbox' class='ios8-switch' id='checkbox'>
+                            <label for='checkbox'></label>
+                    </div>
+                </section>
+                <section class="buttons-container">
+                    <button id="closePopupProcess">Cancelar</button>
+                    <button id="actionProcess">Aceptar</button>
+                </section>
+            </div>
+        </div>
+        <!-- print window  -->
+        <div class="overlay-print" id="overlay-print">
+            <div class="popup-print" id="popup-print">
+                <section class="title-container">
+                    <p class="title">Imprimir ticket</p>
+                </section>
+                <div class="print-area">
+                <div id="insertTicket" class="insertTicket">
+                    <p>Vista de impresion</p> 
+                </div>
+                <p class="name-area">Vista de impresion</p>
+                </div>
+                <section class="buttons-container">
+                    <button id="closePopupPrint">Cancelar</button>
+                    <button id="actionPrint">Aceptar</button>
+                </section>
+            </div>
+        </div>
+    <!-- scripts -->
+    <script src="assets/dragula/dragula.js"></script>
+    <script src="js/draggable.js"></script>
+    <script src="js/panel.js"></script>
+</body>
+</html>

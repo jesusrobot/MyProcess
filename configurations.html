@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyProcess</title>
+    <link rel="stylesheet" href="style/darkmode.css">
+    <link rel="stylesheet" href="style/panel.css">
+    <link rel="stylesheet" href="style/componentes.css">
+    <link rel="stylesheet" href="style/configurations.css">
+</head>
+<body id="body"> 
+    <!-- nav -->
+    <nav class="navigation">
+        <div class="navigation-division left">
+            <button class="button mr" id="back"><img class="icon" src="assets/icons/previous.svg" alt=""></button>
+        </div>
+        <div class="navigation-division center">
+            <h1 class="app-title">MyProcess</h1>
+        </div>
+        <div class="navigation-division rigth">
+            <button class="button ml" id="menu"><img class="icon" src="assets/icons/menu.svg" alt=""></button>
+        </div>
+    </nav>
+    <!-- lists -->
+    <main class="container-configs container">
+        <!-- toolbar -->
+        <div class="tool-bar">
+            <div class="left div-50">
+                <button class="button bkg-blue"><img src="assets/icons/gear.svg" alt="" class="icon"></button>
+                <div class="info">
+                    <h2 class="sub-title">Configuracion</h2>
+                    <!-- <p><span id="counter-g"></span> items</p> -->
+                </div>
+                <!-- <div id="tools" class="tools">
+                    <button class="btnRestore" id="restore">Restaurar</button>
+                </div> -->
+            </div>
+            <div class="rigth div-50">
+                <div class="search-container">
+                        <!-- <input type="text" name="" id="finder" placeholder="Search">                -->
+                    <!-- <button class="button mr-small"><img class="icon" src="assets/icons/loupe.svg" alt=""></button>  -->
+                </div>
+            </div>
+        </div>
+        <!-- <div class="tabs-container" id="tabs">
+            <button class="select-tab" id="all">Todo</button>
+            <button id="to-do">Por empezar</button>
+            <button id="doing">En proceso</button>
+            <button id="done">Finalizado</button>
+            <button id="processed">Procesados</button>
+            <button id="recycleBin">Borrado</button>
+        </div> -->
+        <div class="configs-container">
+            <aside class="configurations">
+                <div class="config-section">
+                    <div class="indicator"></div>
+                    <div class="icon-tab green">
+                        <img class="img-icon" src="assets/icons/art.svg" alt="">
+                    </div>
+                    <div class="name-section">Apariencia</div>
+                </div>
+                <!-- <div class="config-section">
+                    <div class="indicator"></div>
+                    <div class="icon-tab red">
+                        <img class="img-icon" src="assets/icons/rocket.svg" alt="">
+                    </div>
+                    <div class="name-section">General</div>
+                </div>
+                <div class="config-section">
+                    <div class="indicator"></div>
+                    <div class="icon-tab">
+                        <img class="img-icon" src="assets/icons/info.svg" alt="">
+                    </div>
+                    <div class="name-section">Sobre MyProcess</div>
+                </div> -->
+            </aside>
+            <div class="options-container">
+                <div class="options">
+                    <div class="section-title">Apariencia</div>
+                    <div class="option">
+                        <div class="top">
+                            <div class="description-option">Activar el modo oscuro</div>
+                            <div class="check">
+                                <input type='checkbox' class='ios8-switch' id='checkbox'>
+                                <label for='checkbox'></label>
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <div class="sub-title-option">Previsualización</div>
+                            <div class="caputures-section">
+                                <div class="capture">Antes<img src="assets/img/screenshot.png" alt=""></div>
+                                <div class="capture">Despues<img src="assets/img/capturadarkmode.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="option">
+                        <div class="top">
+                            <div class="description-option">Activar el modo translúcido</div>
+                            <div class="check">
+                                <input type='checkbox' class='ios8-switch' id='checkbox'>
+                                <label for='checkbox'></label>
+                            </div>
+                        </div>
+                        <div class="preview">
+                            <div class="sub-title-option">Previsualización</div>
+                            <div class="caputures-section">
+                                <div class="capture">Antes<img src="assets/img/screenshot.png" alt=""></div>
+                                <div class="capture">Despues<img src="assets/img/screenshot.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </main>
+     <!-- menu -->
+     <nav class="overlay-menu" id="overlay">
+            <div class="popup-menu" id="popup">
+                <div class="link-container">
+                    <a href="panel.html" class="link">Lineproduction</a> 
+                 </div>
+                 <div class="link-container">
+                     <a href="lists.html" class="link">Listas</a>
+                 </div>
+                 <div class="link-container">
+                     <a href="backup.html" class="link">Respaldos</a>
+                 </div>
+                 <div class="link-container">
+                    <a href="configurations.html" class="link here">Configuracion</a>
+                </div>
+                 <div class="link-container">
+                     <a href="about.html" class="link">Sobre MyProcess</a>
+                 </div>
+                <div class=" no-border-bottom">
+                    <button class="close" id="cerrar">Cerrar</button>
+                </div>
+            </div>
+    </nav>
+   
+
+    <!-- scripts -->
+    <script src="js/config.js"></script>
+</body>
+</html>
